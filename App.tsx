@@ -196,7 +196,7 @@ export default function App() {
       >
         <View style={estilos.modalContainer}>
           <View style={estilos.modalContent}>
-            <Text style={estilos.historicoTitulo}>Pontos Registrado</Text>
+            <Text style={estilos.historicoTitulo}>Pontos Registrados</Text>
             {pontosSalvos.length > 0 ? (
               <FlatList
                 data={[...pontosSalvos].sort(
