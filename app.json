@@ -31,6 +31,12 @@
         "projectId": "f33ae0ea-8cdb-47d3-aa07-db7933b1c654"
       }
     },
-    "owner": "joaopedro07"
+    "owner": "joaopedro07",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f33ae0ea-8cdb-47d3-aa07-db7933b1c654"
+    }
   }
 }
