@@ -17,16 +17,6 @@
       ]
     ],
 
-    "splash": {
-      "image": "./assets/icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-
-    "ios": {
-      "supportsTablet": true
-    },
-
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -34,7 +24,23 @@
       },
       "edgeToEdgeEnabled": true,
       "package": "com.joaopedro07.marcadordepontos",
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyBk6EWveMcfwwQX8OrXmgT12QCpcKTi5-8"
+        }
+      }
+    },
+
+    "ios": {
+      "supportsTablet": true
+    },
+
+    "splash": {
+      "image": "./assets/icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
     },
 
     "web": {
