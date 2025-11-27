@@ -7,14 +7,26 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
+
+    "plugins": [
+      [
+        "react-native-maps",
+        {
+          "googleMapsApiKey": "AIzaSyBk6EWveMcfwwQX8OrXmgT12QCpcKTi5-8"
+        }
+      ]
+    ],
+
     "splash": {
       "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -24,18 +36,23 @@
       "package": "com.joaopedro07.marcadordepontos",
       "predictiveBackGestureEnabled": false
     },
+
     "web": {
       "favicon": "./assets/favicon.png"
     },
+
     "extra": {
       "eas": {
         "projectId": "f33ae0ea-8cdb-47d3-aa07-db7933b1c654"
       }
     },
+
     "owner": "joaopedro07",
+
     "runtimeVersion": {
       "policy": "appVersion"
     },
+
     "updates": {
       "url": "https://u.expo.dev/f33ae0ea-8cdb-47d3-aa07-db7933b1c654"
     }
