@@ -45,15 +45,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
   },
 
-  plugins: [
-    "expo-router",
-    [
-      "react-native-maps",
-      {
-        googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
-      },
-    ],
-  ],
+  plugins: ["expo-router"],
 
   extra: {
     GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
