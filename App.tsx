@@ -12,7 +12,7 @@ import {
 import { StatusBar } from "expo-status-bar";
 import * as Location from "expo-location";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import MapView, { Marker } from "react-native-maps";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 
 export default function App() {
   const [location, setLocation] = useState<Location.LocationObject | null>(
@@ -20,7 +20,7 @@ export default function App() {
   );
   const [currentDateTime, setCurrentDateTime] = useState<string>("");
   const [pontosSalvos, setPontosSalvos] = useState<any[]>([]);
-  const [modalVisible, setModalVisible] = useState(false); // Novo estado para o modal
+  const [modalVisible, setModalVisible] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -144,8 +144,11 @@ export default function App() {
         <View style={estilos.fundo}>
           <Text style={estilos.titulo}>Meu histórico de localização</Text>
           <StatusBar style="auto" />
+
+          {/* MAPA CORRIGIDO */}
           <MapView
             style={estilos.mapa}
+            provider={PROVIDER_GOOGLE} // <<< AQUI ESTÁ A CORREÇÃO
             region={
               location
                 ? {
@@ -296,7 +299,6 @@ const estilos = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
   },
-  // Estilos do Modal
   modalContainer: {
     flex: 1,
     justifyContent: "center",
