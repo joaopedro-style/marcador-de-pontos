@@ -1,9 +1,9 @@
 import "dotenv/config";
-
 import { ExpoConfig, ConfigContext } from "@expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
+
   name: "marcador-de-pontos",
   slug: "marcador-de-pontos",
   owner: "joaopedro07",
@@ -11,7 +11,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
-  userInterfaceStyle: "automatic",
+  userInterfaceStyle: "light",
   newArchEnabled: true,
 
   splash: {
@@ -24,6 +24,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 
   ios: {
     supportsTablet: true,
+    config: {
+      googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    },
   },
 
   android: {
@@ -33,9 +36,24 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     },
     edgeToEdgeEnabled: true,
     package: "com.joaopedro07.marcadordepontos",
+    predictiveBackGestureEnabled: false,
+
+    config: {
+      googleMaps: {
+        apiKey: process.env.GOOGLE_MAPS_API_KEY,
+      },
+    },
   },
 
-  plugins: ["expo-router"],
+  plugins: [
+    "expo-router",
+    [
+      "react-native-maps",
+      {
+        googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+      },
+    ],
+  ],
 
   extra: {
     GOOGLE_MAPS_API_KEY: process.env.GOOGLE_MAPS_API_KEY,
